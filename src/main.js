@@ -5,9 +5,20 @@ import VueRouter from 'vue-router'
 import Dashboard from './components/Dashboard'
 import Create from "@/components/Create";
 import TailablePagination from 'tailable-pagination';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faMonero } from '@fortawesome/free-brands-svg-icons'
+
+
+
+library.add(faMonero)
+
+library.add(faUserSecret)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(TailablePagination);
-
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
